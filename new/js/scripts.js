@@ -2112,15 +2112,24 @@ $(function(){
 		});*/
 	/* модальные окна */
 	
-	$('.fancybox').fancybox();
+	$('.fancybox').fancybox({ padding:0,margin:5});
 	
 	
 		
 		
 	$('.signMail span').click(function(){$('.hiddenForm').toggleClass('opened'); return false;});
-	$('.buttonMenu').click(function(){$('body').toggleClass('openMenu'); return false;});
+	$('.buttonMenu').click(function(){$('body').toggleClass('openMenu'), $('.boxFieldSearch').removeClass('open'); return false;});
 	$('.menu2 ul li a').click(function(){$(this).parent().find('ul').slideToggle(), $(this).parent().toggleClass('active'); return false;});
-	$('.buttonOpenSearch').click(function(){$(this).parent().find('.boxFieldSearch').toggleClass('open'); return false;});
+	$('.buttonOpenSearch').click(function(){$(this).parent().find('.boxFieldSearch').toggleClass('open'), $('body').removeClass('openMenu'); return false;});
+	$(document).click(function(e){
+		
+			$('body').removeClass('openMenu');
+			/*$('.boxFieldSearch').removeClass('open')*/
+		
+	});
+	
+	$('.search').focus(function(){$('.searchOpenField').slideDown(); return false;});
+	$('.search').focusout(function(){$('.searchOpenField').slideUp(); return false;});
 
 });
 
