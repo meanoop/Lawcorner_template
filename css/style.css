@@ -979,7 +979,7 @@ h2{
 	padding:23px 0% 20px 0%;}
 p{
 	font:30px/35px 'Open Sans';
-	color:#000000;
+	color:#000000;
 	padding:9px 0 6px 0;}
 .boxYellow h2{
 	padding:23px 10% 40px 10%;
@@ -1419,14 +1419,10 @@ footer{
 	vertical-align:middle;}
 .buttonsHelpWindow a .info{
 	width:auto;
-	margin:0 0 0 -85px;
-	padding:0 0 0 90px;
-	 -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-	width:100%;
+	min-width:130px;
 	font:14px/20px 'Bitter';
-	color:#242424;}
+	color:#242424;
+	padding:0 0 3px 7px;}
 .buttonsHelpWindow a .info span{
 	display:block;
 	font-weight:bold;}
@@ -1544,90 +1540,61 @@ footer{
 	padding:12px 0 0 0;}
 	
 .lineTopHeader{
-	height:90px;
+	height:52px;
 	position:absolute;
 	left:0px;
 	top:0px;
 	width:100%;
 	min-width:320px;
-	background:#ffffff;
+	background:linear-gradient(#50a253,#4c954d);;
 	display:block;
 	z-index:11;
 	display:none;
-	border-bottom:solid 1px #b2b2b2;}
-.lineTopHeaderCont{
-	position:relative;
-	width:100%;
 	-webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-	padding:25px 15px 0 15px;}
+	padding:8px 15px 0 15px;}
 .boxLeftLineTop{
 	float:left;
 	width:50%;
 	-webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-	margin-right:-105px;
-	padding:0 115px 0 0;}
+	margin-right:-100px;
+	padding:0 110px 0 0;}
 .boxRightLineTop{
 	float:left;
 	width:50%;
 	-webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-	margin-left:-105px;
-	padding:0 0px 0 115px;
+	margin-left:-100px;
+	padding:0 0px 0 110px;
 	text-align:right;}
-.buttonMenu{
-	width:26px;
-	height:24px;
+.lineTopHeader .buttonMenu{
+	background:url(../img/button_menu.png) no-repeat left top;
+	width:18px;
+	height:18px;
 	display:inline-block;
 	vertical-align:top;
 	background-size:cover;
-	margin:10px 0 0 0px;}
-
-.buttonMenu span{
-	height:5px;
-	width:100%;
-	border-radius: 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px;
-	behavior: url(css/PIE.htc);
-	position:relative;
-	background:#484848;
-	display:block;
-	margin-bottom:4px;}
-.buttonMenu:hover{
-	opacity: 0.7;
-	filter: alpha(opacity=30);}
+	margin:7px 0 0 0px;}
 .boxFieldSearch{
 	display:inline-block;
 	vertical-align:top;
 	width:45%;
 	padding:0 0 0 10px;}
-@media screen and (min-width:768px){
-	.buttonMenu{width:30px; margin-right:10px;}
-	
-}
 .fieldSearch{
-	
+	width:100%;
 	position:relative;
 	margin:0 0 0 0px;}
-	
-.searchOpenField{ background:#FFF; border:1px solid #e4e2e2; border-top:none; padding:10px; position:absolute; left:0px; top:100%; width:100%; margin-top:-3px;  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box; display:none;}
-.searchOpenField ul{ padding:0 0 0 0; }
-.searchOpenField ul li{ display:block; list-style-type:none; padding:5px 0 5px 0;}
-.searchOpenField ul li label{ font:13px/16px Arial; color:#242424;}
-.searchOpenField ul li label input{ display:inline-block; vertical-align:top;}
-.searchOpenField ul li label span{ display:inline-block; vertical-align:top; margin:0 0 0 -30px; padding:0 0 0 30px; width:100%;  -webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box; }
 .fieldSearch input[type="text"]{
 	width:100%;
-	height:36px;
+	height:34px;
 	border:none;
 	font:14px/18px 'ProximaNova';
 	color:#5d5d5e;
-	padding:8px 40px 8px 15px;
+	padding:8px 15px 8px 15px;
 	background:#e4e2e2;
 	border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px;
 	behavior: url(css/PIE.htc);
@@ -1646,17 +1613,23 @@ footer{
 	position:absolute;
 	right:0;
 	top:0px;
-	width:36px;
-	height:36px;
+	width:34px;
+	height:34px;
 	background:url(../img/button_search_2.png) no-repeat center center;}
 .lineTopHeader .mainLogo{
 	float:left;
-	width:210px;
-	margin:9px 0 0 0;
-	position:relative;
-	z-index:2;}
+	width:200px;
+	margin:7px 0 0 0;}
 .lineTopHeader .mainLogo img{
 	width:100%;}
+.btnLogin{
+	display:inline-block;
+	vertical-align:top;
+	font:16px/18px 'ProximaNova';
+	color:#ffffff;
+	margin:8px 0 0 0;}
+.btnLogin:hover{
+	text-decoration:underline;}
 
 .openMenu{}
 .contMainWrapper{
@@ -1665,9 +1638,9 @@ footer{
 	left:0px;}
 .boxOpenMenu{
 	width:280px;
-	border-right:solid 1px #f3713f;
-	border-left:solid 1px #f3713f;
-	background:url(../img/box_window.png) repeat;
+	border-right:solid 1px #0600ff;
+	border-left:solid 1px #0600ff;
+	background:#d9dab3;
 	height:100%;
 	position:absolute;
 	z-index:11;
@@ -1684,7 +1657,8 @@ footer{
 	left:280px;}
 .menu1 ul{}
 .menu1 ul li{
-	list-style:none;}
+	list-style:none;
+	border-bottom:solid 1px #1d9abf;}
 .menu1 ul li a{
 	display:block;
 	padding:20px 20px 20px 20px;}
@@ -1755,21 +1729,16 @@ footer{
 	color:#2d7bca;}
 
 .buttonOpenSearch{
-	width:24px;
-	height:24px;
-	font-size:25px;
+	background:url(../img/button_search.png) no-repeat;
+	width:18px;
+	height:18px;
 	position:relative;
 	display:inline-block;
 	vertical-align:top;
 	margin:7px 0 0 10px;
-	display:none;
-	color:#484848;
-	background-size:cover;}
-.buttonOpenSearch:hover{
-	opacity: 0.7;
-	filter: alpha(opacity=30);}
+	display:none;}
 .boxFieldSearch.open{
-	background:#ffffff;
+	background:#efefef;
 	width:100%;
 	-webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -1777,16 +1746,8 @@ footer{
 	padding:10px 10px 10px 10px;
 	position:absolute;
 	left:0px;
-	top:91px;
+	top:52px;
 	display:block;}
-.lawyerButton{
-	position:relative;
-	display:inline-block;
-	font:600 22px/24px 'Open Sans';
-	color:#232323;
-	padding:7px 0 0 0;}
-.lawyerButton:hover{
-	text-decoration:underline;}
 @media screen and (max-width:1200px){
 	.lineTopHeader{
 		display:block;}
@@ -1864,11 +1825,11 @@ footer{
 	.mainLogo img{
 		width:250px;}
 	header p{
-		font:22px/26px 'Bitter';
-		padding:20px 25px 0 0;}
+		font:24px/28px 'Bitter';
+		padding:47px 25px 0 0;}
 	header .slogan{
-		font:bold 40px/40px 'Bitter';
-		padding:50px 42px 30px 0;}	
+		font:bold 42px/42px 'Bitter';
+		padding:68px 42px 40px 0;}	
 	.windowOpen{
 		width:100%;
 		min-width:300px;
@@ -1899,30 +1860,6 @@ footer{
 	.buttonAdd{
 		width:100px;
 		font:16px/20px 'ProximaNova';}
-		
-		
-	.lineTopHeader .mainLogo{
-		width:150px;
-		margin:13px -5px 0 5px;}
-	.lineTopHeaderCont{
-		padding:25px 10px 0px 10px;}
-	.buttonOpenSearch{
-		margin:7px 0 0 10px;}
-	.boxLeftLineTop{
-		margin-right:-75px;
-		width:48%;
-		padding:0 75px 0 0;}
-	.boxRightLineTop{
-		margin-left:-75px;
-		width:52%;
-		padding:0 0px 0 75px;}
-	.lawyerButton{
-		font:500 16px/18px 'Open Sans';
-		padding:11px 0 0 0;}
-		
-	.windowCont{ padding-left:20px!important; padding-right:20px!important;}
-	.windowOpen .titleWindow{padding-left:20px!important; padding-right:20px!important;}
-	.fancybox-close{ right:15px!important; top:15px!important;}
 }
 @media screen and (max-width:750px){
 	.windowOpen.howItWork{
