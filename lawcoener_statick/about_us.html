@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+<head>
+
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name = "viewport" content = "initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width">
+  <meta property="og:title" content="" />
+  <meta property="og:description" content="" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:site_name" content="" />
+
+  <meta property="fb:app_id" content="" />
+  <meta property="article:publisher" content="" />
+
+  <link rel="stylesheet" href="build/css/font.css" />
+  <link rel="stylesheet" href="build/css/style.css" />
+  <link rel="shortcut icon" href="build/images/favicon.ico" />
+  <link rel="canonical" href="" />
+
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+</head>
+<body>
+<div class="container about-us">
+    <div class="head ">
+        <div class="content ">
+            <a class="logo" href="#" onclick="javascript:window.open('http://lawcorner.com.au/?','_self')"><img
+                    src="http://lawcorner.com.au/assets/images/logo.png" alt="LawCorner"/></a>
+
+            <div class="head-area">
+                <ul>
+                    <li class="askLawyer"><a href="/become-a-member.html" title="Are you a lawyer">Are
+                        you a lawyer?</a></li>
+
+                </ul>
+            </div>
+
+            <div class="mobile-menu"><div class="border-menu"></div>All</div>              <div class="clearFull"></div>
+        </div>
+    </div>
+
+
+    <div class="body">
+        <div class="indicator-area ">
+        </div>
+        <div class="menu ">
+            <div id="overlay"></div>
+            <div id="postcode-box" class="popAutoSize" aria-hidden="true">
+                <div id="search_side" style="display:none">
+                    <h2>Search for a lawyer by name</h2>
+
+                    <div class="reviewLawPop">
+                        <form id="searchPopUp" method="post" action="#">
+                            <input id="search_name" type="text" class="user" name="popUpname"
+                                   placeholder="Eg. Tim Williams">
+                        </form>
+                        <button class="button search-button popUpSearch" value="Search">Search</button>
+                        <div class="clearFull"></div>
+                    </div>
+                </div>
+                <div id="result_side" style="display:none">
+
+                </div>
+                <div id="postCodeFromtopmenu" style="display:none">
+                    <h1>What is your postcode?</h1>
+
+                    <form id="postcode-form" method="post" action="/about_us.html">
+                        <input id="postcode" class="inputSuccess" type="text" name="postcode" maxlength="4"
+                               placeholder="E.g. 2150" value="2000">
+                        <button id="postcode-submit-button-from-topMenu" type="button" class="button">Go</button>
+                        <div class="checkbox accept">
+                            <input id="accept" type="checkbox" checked="checked"><label for="accept"></label> <span
+                                id="accept-label" class="label">I acknowledge I have read the <a
+                                href="/terms-of-use.html" title="Terms of Use" target="_blank">Terms
+                            of Use</a> and <a href="/privacy_policy.html" title="Privacy Policy"
+                                              target="_blank">Privacy Policy</a></span>
+                        </div>
+                    </form>
+                </div>
+                <div id="thanks-box" class="popAutoSize" aria-hidden="true" style="display:none">
+                    <div id="thank_you_box">
+                        <div style="background-color: #f2f2f2; border-radius: 0 0 8px 8px; margin: 21px 5px 5px 5px; text-align: center;">
+                            <div style="display: block; margin-left: 139px; width: 0; max-height: 0; border-left: 10px solid transparent; border-right: 10px solid transparent; border-top: 10px solid #ffffff;">
+                                &nbsp;</div>
+                            <p>Thanks for your review. Please verify your email address by clicking the email we just
+                                sent you.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="welcomePostcodeBox" style="display:none">
+                    <h1>What is your postcode?</h1>
+
+                    <form id="postcode-form-welcome" method="post" action="/about_us.html">
+                        <input id="postcodeWelcome" class="inputSuccess" type="text" name="postcodeWelcome"
+                               maxlength="4" placeholder="E.g. 2150" value="2000">
+                        <button id="postcode-submit-button-welcome-form" type="button" class="button">Go</button>
+                        <div class="checkbox accept">
+                            <input id="accept-welcome" type="checkbox" checked="checked"><label for="accept"></label>
+                            <span id="accept-label" class="label">I acknowledge I have read the <a
+                                    href="/terms-of-use.html" title="Terms of Use" target="_blank">Terms
+                                of Use</a> and <a href="/privacy_policy.html" title="Privacy Policy"
+                                                  target="_blank">Privacy Policy</a></span>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+            <ul>
+                <li class="first"><a href="/Info_page.html"
+                                     titlreviewLawPope="Find Information">Find Information</a></li>
+                <li><a href="/finde.html" title="Find a Lawyer">Find a Lawyer</a></li>
+                <li><a href="http://lawcorner.com.au/#" title="Review a Lawyer" class="reviewPopUp">Review a Lawyer</a>
+                </li>
+            </ul>
+        </div>
+        <!--  <div class="rope"></div> -->
+        <script type="text/javascript">
+            function TogglePostcodeBox_top() {
+                var overlay = $('#overlay');
+                var postcodeBox = $('#postcode-box');
+
+                // Hide
+                if (overlay.css('display') == 'block' && postcodeBox.css('display') == 'block' && (1 || postcodeBox.css('top') == '85px' || postcodeBox.css('top') == '95px')) {
+                    postcodeBox.animate({'top': '-=25', 'opacity': 0}, 250, function () {
+                        $(this).css('display', 'none');
+                    });
+                    overlay.fadeOut();
+                }
+                else if (postcodeBox.css('top') == '60px' || postcodeBox.css('top') == '70px' || 1) {
+                    // Show
+                    overlay.fadeTo(250, 0.85);
+                    postcodeBox.css('display', 'block').animate({'opacity': 1, 'top': '+=26'}, 250);
+                }
+
+            }
+
+
+            function searchFromPopUp() {
+                var url = '/list-lawyers/';
+                var search = ($('#search_name').val() === '' ? undefined : $('#search_name').val());
+
+
+                $.ajax({
+                    url: url,
+                    type: 'POST',
+                    data: {
+                        search: search,
+                        postcode_directory: postcode_directory,
+
+                    },
+                    success: function (data) {
+                        $('#result_side').html(data);
+                    }
+                });
+            }
+
+            var postcode_directory = "2000";
+            if (!postcode_directory) {
+                //window.location.href = window.location.href;
+
+            }
+
+            $(document).ready(function () {
+
+
+                var defaultVal = '';
+                $('#lawyer_name').autocomplete(
+                        {
+                            minLength: 1,
+//            autoFocus: true,
+                            source: function (request, response) {
+                                $.getJSON('/list-lawyer-names/', {name: $('#lawyer_name').val()}, function (data, status, xhr) {
+                                    if (data) {
+                                        response(data.slice(0, 10));
+                                    } else {
+                                        var noResult = {value: false, label: "No results found"};
+                                        response(noResult);
+                                    }
+
+                                });
+                            },
+//           focus: function(event, ui) {
+//                    if (ui!=null){
+//                    defaultVal=ui.item.label;
+//                    }
+//                },
+//            close: function(event, ui) {
+//                $('#lawyer_name').val(defaultVal);
+//            }
+//
+                            select: function (event, ui) {
+                                if (ui.item.label !== 'No results found') {
+                                    $(this).val(ui.item.label);
+                                    $(this).closest('form').submit();
+                                }
+                                return false;
+                            },
+
+                        });
+
+                $('#search_name').autocomplete(
+                        {
+                            minLength: 1,
+                            source: function (request, response) {
+                                $.getJSON('/list-lawyer-names/', {name: $('#search_name').val()}, function (data, status, xhr) {
+                                    if (data) {
+                                        response(data.slice(0, 10));
+                                    } else {
+                                        var noResult = {value: false, label: "No results found"};
+                                        response(noResult);
+                                    }
+
+                                });
+                            },
+                            select: function (event, ui) {
+                                if (ui.item.label != 'No results found') {
+                                    $(this).val(ui.item.label);
+                                }
+                                return false;
+                            },
+                        });
+
+                //
+                $('#searchPopUp').validate(
+                        {
+                            validClass: 'checked',
+                            errorClass: 'invalid',
+                            errorElement: 'label',
+                            ignore: '.ignore',
+                            rules: {
+                                'popUpname': {
+                                    required: true,
+                                    minlength: 3
+                                }
+
+                            },
+                            messages: {
+                                'popUpname': {
+                                    required: 'Please enter minimum 3 characters',
+                                    minlength: 'Please enter minimum 3 characters'
+                                }
+                            },
+                            errorPlacement: function (error, element) {
+                                if ($(element).data('qtip')) {
+                                    $(element).qtip('option', 'content.text', error).addClass('invalid');
+                                }
+                                else {
+                                    $(element).qtip({
+                                        content: {text: error},
+                                        style: {classes: 'qtip-red qtip-rounded qtip-shadow tooltip'},
+                                        position: {my: 'top center', at: 'bottom center'}
+                                    }).addClass('invalid');
+                                }
+                            },
+                            success: function (label, element) {
+                                $(element).qtip('destroy').removeClass('invalid');
+                            },
+                            highlight: function (element, errorClass, validClass) {
+                                $(element).removeClass(validClass).addClass(errorClass);
+                            },
+                            unhighlight: function (element, errorClass, validClass) {
+                                if ($(element).data('qtip')) {
+                                    $(element).qtip('destroy');
+                                }
+                                $(element).removeClass(errorClass).addClass(validClass);
+                            }
+                        });
+
+
+                $(".reviewPopUp, .fromFooter").click(function () {
+                    $('#search_name').qtip('destroy')
+                    $('#searchPopUp')[0].reset();
+                    $('#search_name').removeClass('invalid');
+                    $('#result_side').empty();
+                    $('#postCodeFromtopmenu').hide();
+                    $('#search_side').show();
+                    setTimeout(function () {
+                        $("#search_name").focus();
+                    }, 100);
+                    TogglePostcodeBox_top();
+                    return false;
+                });
+
+                $('[id=overlay]').click(function () {
+                    if (!$(this).is('.overlay-answer-question')) {
+                        TogglePostcodeBox_top();
+                    }
+                    return false;
+                });
+
+
+                $('#set-postcode').click(function () {
+
+                    $('#result_side').empty();
+                    $('#welcomePostcodeBox').hide();
+                    $('#postCodeFromtopmenu').show();
+                    $('#search_side').hide();
+                    TogglePostcodeBox_top();
+                    return false;
+                });
+
+                $('#postcode-submit-button-from-topMenu').click(function () {
+
+                    //$('#postcode-box').hide();
+                    //$('#overlay').hide();
+                    $('#postcode-form').submit();
+
+                })
+                //popUpSearch
+                $(".popUpSearch").click(function () {
+                    var validate_res = $('#searchPopUp').valid();
+                    if (validate_res == true) {
+                        searchFromPopUp();
+                        $('#search_side').hide();
+                        $('#result_side').show();
+                        return false;
+                    }
+
+                });
+
+                $('#searchPopUp').keypress(function (e) {
+                    if (e.which == 13) {
+                        var validate_res = $('#searchPopUp').valid();
+                        if (validate_res == true) {
+                            searchFromPopUp();
+                            $('#search_side').hide();
+                            $('#result_side').show();
+                            return false;
+                        }
+                    }
+                })
+
+
+                window.validator_postcode_welcome = $('#postcode-form-welcome').validate(
+                        {
+                            validClass: 'checked',
+                            errorClass: 'invalid',
+                            errorElement: 'label',
+                            ignore: '.ignore',
+                            rules: {
+                                postcodeWelcome: {
+                                    required: true,
+                                    number: true,
+                                    minlength: 3
+                                }
+                            },
+                            messages: {
+                                postcodeWelcome: {
+                                    required: 'Enter a postcode',
+                                    number: 'Enter a valid postcode',
+                                    minlength: 'Enter a valid postcode'
+                                }
+                            },
+                            errorPlacement: function (error, element) {
+
+                                if ($(element).data('qtip')) {
+                                    $(element).qtip('option', 'content.text', error).addClass('invalid');
+                                }
+                                else {
+                                    $(element).qtip({
+                                        content: {text: error},
+                                        style: {classes: 'qtip-red qtip-rounded qtip-shadow tooltip'},
+                                        position: {my: 'top center', at: 'bottom center'}
+                                    }).addClass('invalid');
+                                }
+                            },
+                            success: function (label, element) {
+                                $(element).qtip('destroy').removeClass('invalid');
+                            },
+                            highlight: function (element, errorClass, validClass) {
+                                $(element).removeClass(validClass).addClass(errorClass);
+                            },
+                            unhighlight: function (element, errorClass, validClass) {
+                                if ($(element).data('qtip')) {
+                                    $(element).qtip('destroy');
+                                }
+                                $(element).removeClass(errorClass).addClass(validClass);
+                            }
+                        });
+
+                $('#postcode-form-welcome').submit(function () {
+
+                    if ($('#accept').is(':checked') && ($('#postcodeWelcome').val().length == 4 || $('#postcodeWelcome').val().length == 3)) {
+
+                        if (window.validator_postcode_welcome.form()) {
+
+                            var postcode = $('#postcodeWelcome').val();
+
+                            //$('#set-postcode').html(postcode);
+                            //alert(postcode);
+                            setPostcode_welcome(postcode);
+                            $('#disabled').hide();
+                            $('#welcomePostcodeBox').hide();
+                            $('#overlay').hide();
+                            $('#postcode-box').hide();
+                            setTimeout(function () {
+                                window.location.reload();
+                            }, 3000);
+                            return false;
+                        } else {
+                            return false;
+                        }
+                    }
+
+                    return false;
+                });
+
+                function setPostcode_welcome(postcode) {
+                    if (postcode.length == 4 || postcode.length == 3) {
+                        $.post('/set-postcode/',
+                                {
+                                    'postcode': postcode
+                                });
+                    }
+                }
+
+                $('#postcode-submit-button-welcome-form').click(function () {
+
+                    //$('#postcode-box').hide();
+                    //$('#overlay').hide();
+                    $('#postcode-form-welcome').submit();
+
+                })
+
+
+            })///end of document ready
+        </script>
+        <div class="content">
+            <h2 class="aboutHead">LawCorner is about real people, living real lives.</h2>
+
+            <div class="aboutCont">
+                <p>
+                    Lives that are busy and complicated, and where unexpected problems crop up.
+                    They are baristas, shopkeepers, office workers, tradies, small business people, nurses and
+                    professionals. They are fathers, mothers, sisters and brothers.
+                </p>
+
+                <p>
+
+                    Every day, thousands of people wake up to face a legal problem in their business or personal lives,
+                    leaving them feeling vulnerable and uncertain about where to turn for help.
+                </p>
+
+                <p>
+                    Every day someone’s husband leaves, a worker is bullied into resigning, a small business owner gets
+                    a letter of demand, a bread winner hurts his back at work, a daughter is left out of a Will and a
+                    doctor’s negligence leaves a someone with an injury.
+                </p>
+
+                <p>
+                    Our mission is to give peace of mind and confidence to everyday Aussies facing legal problems.
+                </p>
+
+                <p>
+                    We believe everyone should have access to no-nonsense, practical legal information when they need
+                    it.
+                </p>
+
+                <p class="pLast">
+                    We believe that finding a good lawyer shouldn’t be about sifting through fancy corporate logos in
+                    the Yellow Pages. It should be personal, because legal stuff is personal.
+                </p>
+                <a class="linkOrange">That’s why we built LawCorner. </a>
+            </div>
+            <div class="aboutSecImg">
+                <div class="aboutImgHold">
+                    <img src="../build/images/kim_img.png" alt="LawCorner">
+                </div>
+                <div class="aboutNameDiv">
+                    <h4>Kim McFayden</h4>
+                    <h4>Founder/CEO of LawCorner</h4>
+
+                    <div class="social">
+                        <a href="https://plus.google.com/+KimMcFayden/about" title="Google+"
+                           class="google-plus googleIcon">Google+</a> <a href="http://www.linkedin.com/in/kimmcfayden"
+                                                                         title="LinkedIn" class="linkedin linkedIcon">LinkedIn</a>
+                        <a href="https://twitter.com/kimmcfayden" title="Twitter" class="twitter tweetIcon">Twitter</a>
+                        <a href="/contackt_us.html" title="Contact Me" class="email emailIcon">Contact
+                            Me</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+
+            $('#log-m').click(function (evt) {
+                evt.preventDefault();
+                //  Toggle login box
+                $('#regdiv').hide();
+                $('#logindiv').show();
+                $(this).addClass('active-tab');
+                $('#reg-m').removeClass('active-tab');
+            });
+
+            $('#reg-m').click(function (evt) {
+                evt.preventDefault();
+                //  Toggle login box
+                $('#logindiv').hide();
+                $('#regdiv').show();
+                $(this).addClass('active-tab');
+                $('#log-m').removeClass('active-tab');
+            });
+
+            //  User clicks register button
+            $("#reg_submit").click(function (evt) {
+                evt.preventDefault();
+
+                /*var bValid = true;
+                 $("#register-user-form").valid();
+
+
+                 $.post("/client-validator/",
+                 {
+                 'reg_email': $('#reg_email').val(),
+                 'email': $('#reg_email').val()
+                 },
+                 function(data){
+                 alert( data );
+                 if ( data == 'false'){
+                 bValid = false;
+                 }
+                 });*/
+
+                if ($("#register-user-form").valid()) {
+                    $.post(
+                            "/register-client/",
+                            {
+                                'reg_first_name': $('#reg_first_name').val(),
+                                'reg_last_name': $('#reg_last_name').val(),
+                                'reg_email': $('#reg_email').val(),
+                                'reg_password': $('#reg_password').val()
+                            },
+                            function (data) {
+                                if (data) {
+                                    loggedin = 1;
+
+                                    $('#reg-box').hide();
+                                    //ToggleRegisterBox_top();
+                                    $('.register-overlay').fadeOut();
+                                    save_review('signup');
+
+                                    $(".login-section").hide();
+                                    $(".loginseparator").hide();
+                                }
+                            });
+                }
+            });
+
+        });
+    </script>
+
+    <div class="footer">
+        <div class="footer-content">
+            <div id="overlay" class="register-overlay"></div>
+            <div style="right: 250px;top:20px;" id="reg-box" class="popStyle regPopSt" aria-hidden="true">
+                <h2>
+                    <a href="#" id="log-m" class="active-tab">Login</a> / <a href="#" id="reg-m">Sign Up</a></h2>
+                <div id="logindiv">
+                    <div>
+                        <div class="right" style="margin-right:10px; width: 300px;">
+                            <input type="text" id="email" class="email" name="email" placeholder="Your email address" value="">
+                            <input type="password" id="password" class="password" name="password" placeholder="Your password">
+                            <button type="button" class="button" id="login_submit">Log In</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="regdiv" style="display: none;">
+
+                    <div class="regInputs">
+                        <h3>Connect with your social Profile</h3>
+
+                        <div style="padding-bottom: 5px" id="janrainEngageEmbed"></div>
+
+                        <form action="http://lawcorner.com.au/register-client" method="post" accept-charset="utf-8" id="register-user-form">
+                            <div class="inputUser">
+                                <input type="text" name="reg_first_name" value="" id="reg_first_name" placeholder="First name" autocomplete="off"  />                                    </div>
+                            <div class="inputUser">
+                                <input type="text" name="reg_last_name" value="" id="reg_last_name" placeholder="Last name"  />                                    </div>
+                            <div class="inputEmail">
+                                <input type="text" name="reg_email" value="" id="reg_email" placeholder="Email address"  />                                    </div>
+                            <div class="inputPass">
+                                <input type="password" name="reg_password" value="" id="reg_password" placeholder="Password"  />                                    </div>
+                            <div>
+                                <input type="submit" name="reg_submit" value="Sign up" id="reg_submit" class="button register-button"  />                                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-column first">
+                <h4>Clients</h4>
+                <ul>
+                    <li><a href="/finde-info.html" title="Find Information & Answers" id="footerInfo">Find Information & Answers</a></li>
+                    <li><a href="/finde.html" title="Find a Lawyer" id="footerFind">Find a Lawyer</a></li>
+                    <li>
+
+                        <a href="/login.html" title="Login">Login</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Lawyers</h4>
+                <ul>
+                    <li><a href="/become-a-member.html" title="Become a member" class="become-a-member">Become a member</a></li>
+                    <li><a href="/login.html" title="Login">Login</a></li>
+                    <li>
+                        <a href="//lawcorner.zendesk.com/hc/en-us" title="FAQs" target="_blank">FAQs</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="/about_us.html" title="About Us">About Us</a></li>
+                    <li><a href="/contackt_us.html" title="Contact Us">Contact Us</a></li>
+                    <li><a href="/privacy_policy.html" title="Privacy Policy">Privacy Policy</a></li>
+                    <li><a href="/terms-of-use.html" title="Terms of Use">Terms of Use</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Social</h4>
+                <ul>
+                    <li><a href="//www.linkedin.com/company/lawcorner" title="LinkedIn" class="linkedin icon">LinkedIn</a></li>
+                    <li><a href="//www.facebook.com/pages/LawCorner/142326245938231" title="Facebook" class="facebook icon">Facebook</a></li>
+                    <li><a href="//twitter.com/LawCornerHQ" title="Twitter" class="twitter icon">Twitter</a></li>
+                    <li><a href="//plus.google.com/116824329396545850071" title="Google+" class="google-plus icon" rel="publisher">Google+</a></li>
+                </ul>
+            </div>
+            <hr class="footer-line">
+            <div class="footer-text">
+                <span style="display: inline-table; vertical-align: middle; height: 50px;">Copyright &copy; 2015 <a href="http://lawcorner.com.au/">LawCorner</a>. All rights reserved.</span>
+                <span style="float:none"><a href="https://heapanalytics.com/?utm_source=badge"><img style="width:108px;height:41px" src="//heapanalytics.com/img/badgeLight.png" alt="Heap - iOS and Web Analytics" /></a></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="build/js/scripts.js"></script>
+
+
+</body>
+</html>
